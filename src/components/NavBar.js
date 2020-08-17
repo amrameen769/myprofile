@@ -1,11 +1,44 @@
 import React from 'react';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import FacebookIcon from '@material-ui/icons/Facebook';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+    },
+    menuButton: {
+        marginRight: theme.spacing(2),
+    },
+    title: {
+        flexGrow: 1,
+    }
+}));
 
 const NavBar = () => {
+    const classes = useStyles();
     return (
         <div>
-            <AccountBoxIcon fontSize={"large"}/>
-            NavBar
+            <AppBar position={"static"} color={"primary"}>
+                <Toolbar>
+                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
+                    <Typography variant="h6" className={classes.title}>
+                        Al Ameen AR
+                    </Typography>
+                    <IconButton href={"https://facebook.com/AlAmeen.Samar"}>
+                        <FacebookIcon color={"secondary"}/>
+                    </IconButton>
+                    <IconButton href="https://github.com/amrameen769" color="inherit"><GitHubIcon/></IconButton>
+                </Toolbar>
+            </AppBar>
+            <Toolbar id="back-to-top-anchor" />
         </div>
     );
 };
