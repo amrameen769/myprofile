@@ -10,7 +10,6 @@ const Launcher = () => {
                     Hi, I am Al Ameen AR, this Website is Under Development.
                 </p>
             </Container>
-
         </div>
     );
 };
