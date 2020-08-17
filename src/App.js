@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
+import NavBar from "./components/NavBar";
+import Launcher from "./components/Launcher";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
 function App() {
     return (
         <div className="App">
+            <CssBaseline />
             <header className="App-header">
-                <p>
-                    Hi, I am Al Ameen AR, this Website is Under Development.
-                </p>
+                <NavBar/>
             </header>
+            <Launcher/>
         </div>
     );
 }
